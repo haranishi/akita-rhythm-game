@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10131a" />
+    <title>灯りの塔 — 1ボタン・リズム試作</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <p class="eyebrow">ORIGINAL ONE-BUTTON RHYTHM PROTOTYPE</p>
+        <h1>灯りの塔</h1>
+        <p id="game-description">合図を聞いて、光の輪が重なる瞬間に押そう。</p>
+      </header>
+
+      <section class="game-card" aria-labelledby="game-description">
+        <div id="game" aria-hidden="true"></div>
+        <div class="hud" aria-label="ゲーム情報">
+          <span>スコア <strong id="score">00000</strong></span>
+          <span>コンボ <strong id="combo">0</strong></span>
+          <span>残り <strong id="remaining">--</strong></span>
+        </div>
+        <p id="judgement" class="judgement" aria-live="polite">開始を押すと音が鳴ります</p>
+        <button id="hit-button" class="hit-button" type="button" disabled aria-label="拍に合わせて押す">
+          押す <span>SPACE / TAP</span>
+        </button>
+      </section>
+
+      <section class="controls" aria-label="プレイ設定">
+        <button id="start-button" class="primary" type="button">ゲームを開始</button>
+        <label for="offset">入力補正 <output id="offset-value">0 ms</output></label>
+        <input id="offset" type="range" min="-150" max="150" step="5" value="0" />
+        <p class="notice">音が重要です。本体スピーカーまたは有線イヤホン推奨。Bluetoothでは補正を調整してください。</p>
+        <p class="rights-note">外部の楽曲・録音・写真・キャラクターを使わず、図形とブラウザ合成音だけで制作した試作です。</p>
+      </section>
+
+      <dialog id="result-dialog">
+        <h2>灯りがともりました</h2>
+        <p id="result-score" class="result-score"></p>
+        <dl id="result-breakdown"></dl>
+        <button id="retry-button" class="primary" type="button">もう一度</button>
+      </dialog>
+    </main>
+  </body>
+</html>
