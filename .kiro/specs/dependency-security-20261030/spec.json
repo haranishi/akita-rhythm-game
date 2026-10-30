@@ -1,0 +1,22 @@
+{
+  "feature_name": "dependency-security-20261030",
+  "language": "ja",
+  "phase": "implementation-complete",
+  "created_at": "2026-10-30",
+  "approvals": {
+    "requirements": {
+      "generated": true,
+      "approved": true
+    },
+    "design": {
+      "generated": true,
+      "approved": true
+    },
+    "tasks": {
+      "generated": true,
+      "approved": true
+    }
+  },
+  "approval_basis": "2026-10-30 本人が全所有リポジトリのセキュリティ修正・SDD補完・PR作成・マージを依頼。通常範囲は自律実行。",
+  "ready_for_implementation": true
+}
